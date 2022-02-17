@@ -72,7 +72,7 @@ const colors =[{Range: '1-20', Color: "#FFFFFF"},
             // blocks
         
             data.forEach((day,i)=>{
-                // AM
+                // before noon
                 svg.append('g')
                 .selectAll('rect')
                 .data(day.Frequency.AM)
@@ -83,7 +83,7 @@ const colors =[{Range: '1-20', Color: "#FFFFFF"},
                 .attr('height', rectSize)
                 .attr('fill', d => colorAssign(d))
         
-                //PM
+                // afternoon
                 svg.append('g')
                 .selectAll('rect')
                 .data(day.Frequency.PM)
